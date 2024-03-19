@@ -1,2 +1,69 @@
-<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-788f4c79-d0ca-4791-bbd4-6f557541175d" age-verfication-lazy></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Verification</title>
+  <style>
+    /* Styling for the pop-up */
+    .age-verification-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .age-verification-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="age-verification-container" id="ageVerificationContainer">
+  <div class="age-verification-content">
+    <h2>Age Verification</h2>
+    <p>You must be 21 years old or older to enter this website.</p>
+    <button onclick="verifyAge()">I am 21 or older</button>
+  </div>
+</div>
+
+<script>
+  // Function to show the age verification pop-up
+  function showAgeVerificationPopup() {
+    var ageVerificationContainer = document.getElementById('ageVerificationContainer');
+    ageVerificationContainer.style.display = 'flex';
+  }
+
+  // Function to verify age
+  function verifyAge() {
+    // Check if the user is 21 or older
+    var age = parseInt(prompt("Please enter your age:"));
+    if (age >= 21) {
+      // If user is 21 or older, hide the pop-up and proceed to the website
+      var ageVerificationContainer = document.getElementById('ageVerificationContainer');
+      ageVerificationContainer.style.display = 'none';
+    } else {
+      // If user is younger than 21, display an error message
+      alert("Sorry, you must be 21 years old or older to enter this website.");
+    }
+  }
+
+  // Show the age verification pop-up when the page loads
+  window.onload = function() {
+    showAgeVerificationPopup();
+  };
+</script>
+
+<!-- Your website content goes here -->
+
+</body>
+</html>
