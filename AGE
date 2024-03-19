@@ -1,2 +1,18 @@
 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-788f4c79-d0ca-4791-bbd4-6f557541175d" data-elfsight-app-lazy></div>
+<div class="elfsight-app-788f4c79-d0ca-4791-bbd4-6f557541175d" 
+     data-position="bottom-right" 
+     data-size="medium" 
+     data-theme="light" 
+     data-layout="horizontal" 
+     data-shape="rounded" 
+     data-preview="true" 
+     data-form-style="modern" 
+     data-contact-email="your@email.com" 
+     data-header-text="Contact Us" 
+     data-header-text-color="#333333" 
+     data-header-background-color="#ffffff" 
+     data-button-background-color="#4CAF50" 
+     data-button-text-color="#ffffff" 
+     data-success-message="Thank you for contacting us! We'll get back to you soon." 
+     data-error-message="Oops! Something went wrong. Please try again later.">
+</div>
